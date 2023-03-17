@@ -68,7 +68,7 @@ export default {
     }
   },
   mounted () {
-    this.$axios.get('/')
+    this.$axios.post('/', { accountName : "HETX"} )
         .then(response => {
             this.$emit('data-received', response.data);
             this.data = response.data;
