@@ -48,7 +48,7 @@ export default {
                 }
             })
             .catch(error => {throw error})
-            this.$axios.get('/db/check/daily')
+            this.$axios.post('/db/check/daily', { name : newValue.nickname })
             .then(response => {
                 const data = response.data
                 // console.log(data)
